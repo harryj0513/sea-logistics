@@ -25,6 +25,7 @@
   .btn { display:inline-block; padding:13px 30px; border-radius:30px; font-size:16px; font-weight:600; text-decoration:none; }
   .btn-orange { background:var(--orange); color:#fff; }
   .btn-ghost { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.75); }
+  .btn-white { background:#fff; color:var(--teal-dark); }
   .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:-34px; position:relative; z-index:2; }
   .stat { background:#fff; border-radius:12px; padding:20px 10px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,.08); }
   .stat .num { font-size:30px; font-weight:800; color:var(--teal-dark); }
@@ -93,6 +94,7 @@
     <p data-i18n="hero2">昆山邦达国际货运代理有限公司 · 国家一级国际货运代理。海、陆、空、铁一体化物流服务，以东南亚专线为核心，7×24 全年为您服务。</p>
     <div class="cta-row">
       <a class="btn btn-orange" href="#quote" data-i18n="hero3">立即询价</a>
+      <a class="btn btn-white" href="#contact" data-i18n="hero5">先咨询一下</a>
       <a class="btn btn-ghost" href="#services" data-i18n="hero4">查看服务项目</a>
     </div>
   </div>
@@ -217,7 +219,7 @@ en: {
   nav1: "Services", nav2: "Key Routes", nav3: "About Us", nav4: "Contact",
   hero1: "Across the World, Delivered as Promised",
   hero2: "Kunshan Bangda International Freight Forwarding Co., Ltd. is a Class-A international freight forwarder. Integrated sea, land, air and rail logistics with Southeast Asia lines at our core, at your service 7×24, all year round.",
-  hero3: "Get a Quote", hero4: "Explore Services",
+  hero3: "Get a Quote", hero4: "Explore Services", hero5: "Ask Us First",
   st1l: "Founded", st2l: "Cities Covered", st3l: "Business Partners", st4l: "Successful Cases",
   svc_t: "Our Services", svc_s: "Sea, land, air and rail, one-stop international logistics",
   s1t: "Vietnam Land Line", s1d: "Exit via Pingxiang Friendship Pass to Hanoi, Bac Ninh, Bac Giang, Hai Phong and Ho Chi Minh City. Northern Vietnam in 24 hours. Our own 5,000 sqm consolidation warehouse, LCL and full-truck options.",
@@ -263,7 +265,7 @@ vi: {
   nav1: "Dịch vụ", nav2: "Tuyến trọng điểm", nav3: "Về chúng tôi", nav4: "Liên hệ",
   hero1: "Vươn ra toàn cầu, giao hàng đúng cam kết",
   hero2: "Công ty TNHH Đại lý Vận tải Quốc tế Bangda Côn Sơn là doanh nghiệp giao nhận quốc tế hạng nhất (Class-A). Vận tải biển, bộ, hàng không và đường sắt tích hợp, lấy chuyên tuyến Đông Nam Á làm cốt lõi, phục vụ 7×24 quanh năm.",
-  hero3: "Báo giá ngay", hero4: "Xem dịch vụ",
+  hero3: "Báo giá ngay", hero4: "Xem dịch vụ", hero5: "Tư vấn trước",
   st1l: "Thành lập", st2l: "Thành phố phủ sóng", st3l: "Đối tác kinh doanh", st4l: "Dự án thành công",
   svc_t: "Dịch vụ của chúng tôi", svc_s: "Đường biển, đường bộ, hàng không, đường sắt, logistics quốc tế một điểm dừng",
   s1t: "Chuyên tuyến đường bộ Việt Nam", s1d: "Xuất cảnh qua cửa khẩu Hữu Nghị, Bằng Tường, đi thẳng Hà Nội, Bắc Ninh, Bắc Giang, Hải Phòng và TP. Hồ Chí Minh. Bắc Việt Nam chỉ 24 giờ. Kho gom hàng 5.000 m² của công ty, linh hoạt ghép hàng và xe nguyên chuyến.",
@@ -309,7 +311,7 @@ ja: {
   nav1: "サービス", nav2: "主要ルート", nav3: "会社案内", nav4: "お問い合わせ",
   hero1: "世界を駆け、必ず届ける",
   hero2: "昆山邦達国際貨運代理有限公司は、国家一級国際貨物代理企業です。海・陸・空・鉄道を一体化した物流サービス、東南アジア専線を中核に、7×24・年中無休で対応します。",
-  hero3: "見積もり依頼", hero4: "サービスを見る",
+  hero3: "見積もり依頼", hero4: "サービスを見る", hero5: "まず相談する",
   st1l: "創業", st2l: "カバー都市", st3l: "提携パートナー", st4l: "成功事例",
   svc_t: "サービス", svc_s: "海・陸・空・鉄道の全チャネルをワンストップで",
   s1t: "ベトナム陸運専線", s1d: "憑祥・友誼関から出境し、ハノイ、バクニン、バクザン、ハイフォン、ホーチミンへ直行。北ベトナムは24時間。自社5,000㎡の分撥倉庫で、混載・貸切に柔軟対応。",
@@ -355,7 +357,7 @@ ko: {
   nav1: "서비스", nav2: "핵심 노선", nav3: "회사 소개", nav4: "문의하기",
   hero1: "세계를 누비며, 반드시 도착합니다",
   hero2: "쿤산 방다 국제화물대리 유한공사는 국가 1급 국제 화물 대리 기업입니다. 해운, 육운, 항공, 철도를 아우르는 종합 물류 서비스, 동남아 전용선을 핵심으로 7×24 연중무휴로 모십니다.",
-  hero3: "견적 문의", hero4: "서비스 보기",
+  hero3: "견적 문의", hero4: "서비스 보기", hero5: "먼저 상담하기",
   st1l: "설립", st2l: "커버 도시", st3l: "협력 파트너", st4l: "성공 사례",
   svc_t: "서비스", svc_s: "해상, 육상, 항공, 철도 전 채널 원스톱 국제 물류",
   s1t: "베트남 육운 전용선", s1d: "핑샹 우의관을 통해 출경하여 하노이, 박닌, 박장, 하이퐁, 호찌민 직행. 북부 베트남 24시간 도착. 자체 5,000㎡ 분배 창고로 혼재와 전세 차량 모두 유연하게 운영합니다.",
