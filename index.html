@@ -3,124 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>东南亚专线货代 · 双清包税到门</title>
+<title data-i18n="ttl">邦达国际物流 BONDX | 昆山国际货运代理 · 越南专线 · 东南亚物流</title>
 <style>
   :root { --teal:#0E5F56; --teal-dark:#093f39; --orange:#FF7A1A; --ink:#1d2b28; --bg:#f7faf9; --line:#dce8e5; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
-  header { background:var(--teal); color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
-  header .logo { font-size:20px; font-weight:700; letter-spacing:1px; }
-  header .logo span { color:var(--orange); }
-  .lang-btn { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.6); border-radius:20px; padding:5px 14px; cursor:pointer; font-size:13px; }
-  .wrap { max-width:1020px; margin:0 auto; padding:0 18px; }
-  .hero { background:linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 100%); color:#fff; padding:56px 0 64px; text-align:center; }
-  .hero h1 { font-size:34px; line-height:1.35; margin-bottom:14px; }
-  .hero h1 .hl { color:var(--orange); }
-  .hero p { font-size:17px; opacity:.92; max-width:640px; margin:0 auto 26px; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei","Noto Sans","Noto Sans KR","Noto Sans JP",sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; }
+  header { background:var(--teal); color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; position:sticky; top:0; z-index:50; box-shadow:0 2px 8px rgba(0,0,0,.12); }
+  header .logo { font-size:22px; font-weight:800; letter-spacing:1px; }
+  header .logo span { color:var(--orange); font-size:13px; font-weight:600; letter-spacing:0; margin-left:8px; }
+  header nav { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header nav a { color:#e7f2ef; text-decoration:none; font-size:14px; }
+  header nav a:hover { color:#fff; text-decoration:underline; }
+  .lang-bar { display:flex; gap:6px; flex-wrap:wrap; }
+  .lang-btn { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.55); border-radius:20px; padding:5px 12px; cursor:pointer; font-size:13px; font-family:inherit; }
+  .lang-btn.active { background:#fff; color:var(--teal-dark); font-weight:700; border-color:#fff; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 18px; }
+  .hero { background:linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 100%); color:#fff; padding:60px 0 66px; text-align:center; }
+  .hero h1 { font-size:38px; line-height:1.3; margin-bottom:16px; letter-spacing:2px; }
+  .hero p { font-size:17px; opacity:.93; max-width:760px; margin:0 auto 28px; }
   .cta-row { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
   .btn { display:inline-block; padding:13px 30px; border-radius:30px; font-size:16px; font-weight:600; text-decoration:none; }
   .btn-orange { background:var(--orange); color:#fff; }
   .btn-ghost { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.75); }
-  section { padding:44px 0 8px; }
-  h2 { font-size:24px; color:var(--teal-dark); margin-bottom:6px; }
-  .sec-sub { color:#5c6f6a; margin-bottom:20px; font-size:15px; }
-  table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.06); }
-  th { background:var(--teal); color:#fff; text-align:left; padding:12px 14px; font-size:14px; }
-  td { padding:12px 14px; border-top:1px solid var(--line); font-size:15px; }
-  tr td:first-child { font-weight:600; }
-  .code { display:inline-block; background:#e6f2f0; color:var(--teal-dark); border-radius:5px; padding:1px 8px; font-size:13px; font-weight:700; }
-  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-  .step { background:#fff; border-radius:12px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
-  .step .num { width:34px; height:34px; border-radius:50%; background:var(--orange); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
-  .step h3 { font-size:17px; margin-bottom:6px; color:var(--teal-dark); }
-  .step p { font-size:14px; color:#44554f; }
-  .docs { background:#fff; border-radius:12px; padding:20px 24px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
-  .docs li { margin:6px 0 6px 18px; font-size:15px; }
-  details { background:#fff; border-radius:10px; padding:14px 18px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,.05); }
-  summary { font-weight:600; cursor:pointer; color:var(--teal-dark); }
-  details p { margin-top:8px; font-size:14px; color:#44554f; }
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:-34px; position:relative; z-index:2; }
+  .stat { background:#fff; border-radius:12px; padding:20px 10px; text-align:center; box-shadow:0 2px 10px rgba(0,0,0,.08); }
+  .stat .num { font-size:30px; font-weight:800; color:var(--teal-dark); }
+  .stat .lbl { font-size:14px; color:#5c6f6a; }
+  section { padding:46px 0 6px; }
+  h2 { font-size:25px; color:var(--teal-dark); margin-bottom:6px; }
+  .sec-sub { color:#5c6f6a; margin-bottom:22px; font-size:15px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .card { background:#fff; border-radius:12px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .card h3 { font-size:17px; margin-bottom:7px; color:var(--teal-dark); }
+  .card p { font-size:14px; color:#44554f; }
+  .routes { background:#fff; border-radius:12px; padding:8px 22px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .route { padding:14px 0; border-top:1px solid var(--line); }
+  .route:first-child { border-top:none; }
+  .route h3 { font-size:16px; color:var(--teal-dark); margin-bottom:3px; }
+  .route h3 .tag { background:var(--orange); color:#fff; font-size:12px; border-radius:10px; padding:1px 9px; margin-left:8px; vertical-align:2px; }
+  .route p { font-size:14.5px; color:#44554f; }
+  .about-box { background:#fff; border-radius:12px; padding:22px 24px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .about-box p { font-size:15px; color:#33463f; margin-bottom:12px; }
+  .timeline { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:16px; }
+  .tl { background:#eef5f3; border-radius:10px; padding:14px; }
+  .tl .yr { font-size:19px; font-weight:800; color:var(--teal); }
+  .tl .tx { font-size:13.5px; color:#44554f; margin-top:3px; }
+  .badges { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }
+  .badge { background:#e6f2f0; color:var(--teal-dark); border-radius:20px; padding:6px 16px; font-size:14px; font-weight:600; }
+  .contact-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  .contact-card { background:#fff; border-radius:12px; padding:18px 20px; box-shadow:0 1px 4px rgba(0,0,0,.06); font-size:15px; }
+  .contact-card .k { color:#5c6f6a; font-size:13px; }
+  .contact-card .v { font-size:17px; font-weight:700; color:var(--teal-dark); }
+  .contact-card .v a { color:var(--teal-dark); text-decoration:none; }
   form.quote { background:#fff; border-radius:12px; padding:22px; box-shadow:0 1px 4px rgba(0,0,0,.06); display:grid; grid-template-columns:1fr 1fr; gap:12px; }
   form.quote label { font-size:13px; color:#5c6f6a; display:block; margin-bottom:4px; }
-  form.quote input, form.quote select { width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; font-size:15px; font-family:inherit; }
+  form.quote input { width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; font-size:15px; font-family:inherit; }
   form.quote .full { grid-column:span 2; }
-  form.quote button { background:var(--orange); color:#fff; border:none; border-radius:30px; padding:13px; font-size:16px; font-weight:600; cursor:pointer; width:100%; }
-  footer { margin-top:48px; background:var(--teal-dark); color:#d7e8e4; padding:28px 0; font-size:14px; }
+  form.quote button { background:var(--orange); color:#fff; border:none; border-radius:30px; padding:13px; font-size:16px; font-weight:600; cursor:pointer; width:100%; font-family:inherit; }
+  footer { margin-top:50px; background:var(--teal-dark); color:#d7e8e4; padding:28px 0; font-size:14px; }
   footer b { color:#fff; }
-  .wa-float { position:fixed; right:18px; bottom:18px; background:#25D366; color:#fff; border-radius:30px; padding:12px 20px; font-weight:600; text-decoration:none; box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:15px; }
-  @media (max-width:760px){ .steps{grid-template-columns:1fr;} .hero h1{font-size:27px;} form.quote{grid-template-columns:1fr;} form.quote .full{grid-column:span 1;} }
+  footer a { color:#ffd9ad; }
+  .wa-float { position:fixed; right:18px; bottom:18px; background:var(--teal); color:#fff; border-radius:30px; padding:12px 20px; font-weight:600; text-decoration:none; box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:15px; }
+  @media (max-width:820px){ .grid{grid-template-columns:1fr 1fr;} .timeline{grid-template-columns:1fr 1fr;} .stats{grid-template-columns:1fr 1fr;} .contact-grid{grid-template-columns:1fr;} .hero h1{font-size:29px;} form.quote{grid-template-columns:1fr;} form.quote .full{grid-column:span 1;} }
+  @media (max-width:520px){ .grid{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
 
-
 <header>
-  <div class="logo">公司名 <span>LOGISTICS</span></div>
-  <button class="lang-btn" onclick="toggleLang()">中 / EN</button>
+  <div class="logo">BONDX<span data-i18n="brand_sub">邦达国际物流</span></div>
+  <nav>
+    <a href="#services" data-i18n="nav1">服务项目</a>
+    <a href="#routes" data-i18n="nav2">核心线路</a>
+    <a href="#about" data-i18n="nav3">关于我们</a>
+    <a href="#contact" data-i18n="nav4">联系我们</a>
+  </nav>
+  <div class="lang-bar">
+    <button class="lang-btn active" data-lang="zh" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" data-lang="vi" onclick="setLang('vi')">Tiếng Việt</button>
+    <button class="lang-btn" data-lang="ja" onclick="setLang('ja')">日本語</button>
+    <button class="lang-btn" data-lang="ko" onclick="setLang('ko')">한국어</button>
+  </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
-    <h1 data-zh="中国到东南亚，<span class='hl'>双清包税到门</span><br>一个全包价，剩下的我们办" data-en="China to Southeast Asia, <span class='hl'>all-in, door to door</span><br>One price. We handle the rest.">中国到东南亚，<span class="hl">双清包税到门</span><br>一个全包价，剩下的我们办</h1>
-    <p data-zh="运费、报关、清关、税、派送全包。不用您懂流程，把货和信息给我们，坐等签收。" data-en="Freight, export customs, clearance, tax and delivery, all included. Hand us the cargo and the details, then just wait for delivery.">运费、报关、清关、税、派送全包。不用您懂流程，把货和信息给我们，坐等签收。</p>
+    <h1 data-i18n="hero1">纵横天下，使命必达</h1>
+    <p data-i18n="hero2">昆山邦达国际货运代理有限公司 · 国家一级国际货运代理。海、陆、空、铁一体化物流服务，以东南亚专线为核心，7×24 全年为您服务。</p>
     <div class="cta-row">
-      <a class="btn btn-orange" href="#quote" data-zh="马上询价" data-en="Get a quote">马上询价</a>
-      <a class="btn btn-ghost" href="#routes" data-zh="看线路和时效" data-en="See routes">看线路和时效</a>
+      <a class="btn btn-orange" href="#quote" data-i18n="hero3">立即询价</a>
+      <a class="btn btn-ghost" href="#services" data-i18n="hero4">查看服务项目</a>
     </div>
   </div>
 </div>
 
 <div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="num">2007</div><div class="lbl" data-i18n="st1l">公司成立</div></div>
+    <div class="stat"><div class="num">180+</div><div class="lbl" data-i18n="st2l">覆盖城市</div></div>
+    <div class="stat"><div class="num">120+</div><div class="lbl" data-i18n="st3l">合作伙伴</div></div>
+    <div class="stat"><div class="num">880+</div><div class="lbl" data-i18n="st4l">成功合作案例</div></div>
+  </div>
+
+  <section id="services">
+    <h2 data-i18n="svc_t">服务项目</h2>
+    <p class="sec-sub" data-i18n="svc_s">海、陆、空、铁全渠道，一站式国际物流服务</p>
+    <div class="grid">
+      <div class="card"><h3 data-i18n="s1t">越南陆运专线</h3><p data-i18n="s1d">凭祥友谊关出境，直达河内、北宁、北江、海防、胡志明，北越 24 小时直达。自有 5000㎡ 分拨仓库，集拼与专车灵活发运。</p></div>
+      <div class="card"><h3 data-i18n="s2t">华南陆运专线</h3><p data-i18n="s2d">自有仓库，每天发车。广州、东莞、南宁、凭祥 24 小时直达，覆盖华东、华南主要工业区与保税区。</p></div>
+      <div class="card"><h3 data-i18n="s3t">海运进出口</h3><p data-i18n="s3d">整箱、拼箱直达新加坡、东京、釜山、曼谷、海防、胡志明、雅加达、巴生港等主要港口，可走散杂货、冷藏与危险品。</p></div>
+      <div class="card"><h3 data-i18n="s4t">空运进出口</h3><p data-i18n="s4d">全货机包板直达新加坡、东京、曼谷、河内、迪拜、法兰克福、伦敦、洛杉矶、纽约等地，报检、报关、提货、送货到门一站完成。</p></div>
+      <div class="card"><h3 data-i18n="s5t">中欧班列</h3><p data-i18n="s5d">整箱拼箱 20 天直达中亚、俄罗斯、波兰、汉堡、慕尼黑、鹿特丹，辐射东欧与西欧全境。</p></div>
+      <div class="card"><h3 data-i18n="s6t">巴淡岛海运专线</h3><p data-i18n="s6d">上海 — 新加坡 — 巴淡岛固定航线，适合电子、制造类货物稳定出运。</p></div>
+      <div class="card"><h3 data-i18n="s7t">多国跨境线路</h3><p data-i18n="s7d">经凭祥、河内一线贯通越南、老挝、泰国、柬埔寨、马来西亚、新加坡，多国联运一次搞定。</p></div>
+      <div class="card"><h3 data-i18n="s8t">三方物流</h3><p data-i18n="s8d">物流方案设计与第三方物流整体服务，货况信息平台实时查询，365 天 24 小时响应。</p></div>
+      <div class="card"><h3 data-i18n="s9t">外贸代理</h3><p data-i18n="s9d">各类商品及技术进出口代理、对外付汇、自动进口许可证、免 3C 等一站式外贸服务。</p></div>
+      <div class="card"><h3 data-i18n="s10t">认证与单证服务</h3><p data-i18n="s10d">项目审批与备案、电子口岸、免表、手册、机电证、企业备案与年审、保险代理。</p></div>
+      <div class="card"><h3 data-i18n="s11t">内陆运输</h3><p data-i18n="s11d">国内空运与内海集装箱运输，衔接各大仓库与口岸。</p></div>
+      <div class="card"><h3 data-i18n="s12t">仓储与保税物流</h3><p data-i18n="s12d">凭祥综合保税区保税仓储、分拨配送、流通加工、报关报检与转口贸易。</p></div>
+    </div>
+  </section>
 
   <section id="routes">
-    <h2 data-zh="线路 · 时效 · 参考价" data-en="Routes, transit time, reference rates">线路 · 时效 · 参考价</h2>
-    <p class="sec-sub" data-zh="每条线都有一个代码，报价和付款都用它对账。价格是参考，确切价问客服拿，报给您的一定带代码。" data-en="Every route has a code. Quotes and payments use it, so accounts always match. Rates are for reference; your confirmed quote always comes with its code.">每条线都有一个代码，报价和付款都用它对账。价格是参考，确切价问客服拿，报给您的一定带代码。</p>
-    <table>
-      <tr><th data-zh="线路" data-en="Route">线路</th><th data-zh="代码" data-en="Code">代码</th><th data-zh="方式" data-en="Mode">方式</th><th data-zh="时效" data-en="Transit">时效</th><th data-zh="参考价（示例）" data-en="Reference (sample)">参考价（示例）</th></tr>
-      <tr><td>深圳 → 曼谷（泰国）</td><td><span class="code">1a</span></td><td>海运双清到门</td><td>6–9 天</td><td>¥—/kg 起</td></tr>
-      <tr><td>广州 → 胡志明（越南）</td><td><span class="code">2a</span></td><td>陆运 / 海运</td><td>3–6 天</td><td>¥—/kg 起</td></tr>
-      <tr><td>深圳 → 吉隆坡（马来西亚）</td><td><span class="code">3a</span></td><td>空运 / 海运</td><td>4–7 天</td><td>¥—/kg 起</td></tr>
-      <tr><td>义乌 → 雅加达（印度尼西亚）</td><td><span class="code">4a</span></td><td>海运双清到门</td><td>12–15 天</td><td>¥—/方 起</td></tr>
-    </table>
-  </section>
-
-  <section>
-    <h2 data-zh="下单就三步" data-en="Three steps to ship">下单就三步</h2>
-    <p class="sec-sub" data-zh="不用注册，不用下载 App。" data-en="No sign-up, no app to download.">不用注册，不用下载 App。</p>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><h3 data-zh="发信息拿报价" data-en="Send details, get a quote">发信息拿报价</h3><p data-zh="把发货地、目的地、货是什么、多重多大发我们，报价带代码给您，全包多少一目了然。" data-en="Send origin, destination, goods, weight and size. Your quote comes with its code and the all-in amount.">把发货地、目的地、货是什么、多重多大发我们，报价带代码给您，全包多少一目了然。</p></div>
-      <div class="step"><div class="num">2</div><h3 data-zh="发货付款带备注" data-en="Ship and pay with the memo">发货付款带备注</h3><p data-zh="货发到我们仓库，付款时备注写「对接人-代码-金额」，比如 Harry-1a-2800，我们一秒对上账。" data-en="Send cargo to our warehouse. Put the memo on your payment: handler-code-amount, e.g. Harry-1a-2800, and we match it instantly.">货发到我们仓库，付款时备注写「对接人-代码-金额」，比如 Harry-1a-2800，我们一秒对上账。</p></div>
-      <div class="step"><div class="num">3</div><h3 data-zh="等通知签收" data-en="Get updates, sign on delivery">等通知签收</h3><p data-zh="出库、到港、清关、派送，每个节点我们主动通知您，不用您天天来问。最后送到门上签收。" data-en="We message you at every milestone: out of warehouse, arrived, cleared, out for delivery. No need to chase us.">出库、到港、清关、派送，每个节点我们主动通知您，不用您天天来问。最后送到门上签收。</p></div>
+    <h2 data-i18n="rte_t">核心线路</h2>
+    <p class="sec-sub" data-i18n="rte_s">以越南专线为王牌，跨境网络贯通东南亚，班列直达欧洲</p>
+    <div class="routes">
+      <div class="route"><h3><span data-i18n="r1t">越南陆运专线</span><span class="tag" data-i18n="r1tag">王牌线路</span></h3><p data-i18n="r1d">昆山、苏州、上海等地集货 — 南宁 — 凭祥友谊关出境 — 河内、北宁、北江、海阳、海防、富寿、胡志明。北越 24 小时直达。</p></div>
+      <div class="route"><h3 data-i18n="r2t">跨境线路一</h3><p data-i18n="r2d">中国 — 凭祥 — 谅山（友谊关）— 河内 — 万象 — 曼谷 — 槟城 — 新加坡</p></div>
+      <div class="route"><h3 data-i18n="r3t">跨境线路二</h3><p data-i18n="r3d">中国 — 凭祥 — 谅山（友谊关）— 河内 — 胡志明</p></div>
+      <div class="route"><h3 data-i18n="r4t">跨境线路三</h3><p data-i18n="r4d">中国 — 凭祥 — 谅山（友谊关）— 河内 — 胡志明 — 金边 — 曼谷 — 槟城 — 新加坡</p></div>
+      <div class="route"><h3 data-i18n="r5t">中欧班列</h3><p data-i18n="r5d">20 天直达：中亚、俄罗斯、波兰（转东欧全境）、汉堡（转西欧全境）、慕尼黑、鹿特丹</p></div>
     </div>
   </section>
 
-  <section>
-    <h2 data-zh="发货要准备什么" data-en="What to prepare">发货要准备什么</h2>
-    <div class="docs">
-      <ul>
-        <li data-zh="货物清单：品名、数量、重量、体积" data-en="Cargo list: item names, quantity, weight, volume">货物清单：品名、数量、重量、体积</li>
-        <li data-zh="收货人信息：姓名、电话、详细地址" data-en="Receiver: name, phone, full address">收货人信息：姓名、电话、详细地址</li>
-        <li data-zh="带电、液体、品牌货提前说，我们先确认能不能走" data-en="Batteries, liquids or branded goods: tell us first, we confirm before shipping">带电、液体、品牌货提前说，我们先确认能不能走</li>
-      </ul>
+  <section id="about">
+    <h2 data-i18n="abt_t">关于邦达</h2>
+    <p class="sec-sub" data-i18n="abt_s">昆山邦达国际货运代理有限公司</p>
+    <div class="about-box">
+      <p data-i18n="abt_p1">公司成立于 2007 年，是经国家商务部批准、国家工商局登记注册的一级国际货运代理企业，主营海运、空运、陆运、铁路、仓储配送、报关清关、外贸代理、国际快递、保税物流及危险品、冷链货物运输。</p>
+      <p data-i18n="abt_p2">服务理念：客户至上，永续经营；业务零错率，客户要求即追求。优惠的价格、完善的服务、真诚的回报，我们期待与您合作。</p>
+      <div class="timeline">
+        <div class="tl"><div class="yr">2007</div><div class="tx" data-i18n="tl1x">昆山邦达成立</div></div>
+        <div class="tl"><div class="yr">2009</div><div class="tx" data-i18n="tl2x">友润得外贸代理公司成立</div></div>
+        <div class="tl"><div class="yr">2016</div><div class="tx" data-i18n="tl3x">东莞公司及仓库设立</div></div>
+        <div class="tl"><div class="yr">2017</div><div class="tx" data-i18n="tl4x">南宁、凭祥仓库设立</div></div>
+        <div class="tl"><div class="yr">2018–2023</div><div class="tx" data-i18n="tl5x">香港、越南、印尼、泰国、马来西亚邦达相继成立，东南亚服务网络成型</div></div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2 data-zh="常见问题" data-en="FAQ">常见问题</h2>
-    <details><summary data-zh="全包价到底包什么？" data-en="What does the all-in price cover?">全包价到底包什么？</summary><p data-zh="运费、国内报关、目的国清关和税、派送到门，全包。您听到多少钱，最后就是多少钱，没有隐藏收费。" data-en="Freight, export customs, destination clearance and tax, and door delivery. The price you hear is the price you pay, no hidden fees.">运费、国内报关、目的国清关和税、派送到门，全包。您听到多少钱，最后就是多少钱，没有隐藏收费。</p></details>
-    <details><summary data-zh="怎么知道我的货到哪了？" data-en="How do I track my cargo?">怎么知道我的货到哪了？</summary><p data-zh="不用您查。每个节点我们主动发消息给您，着急的话报单号给客服，马上帮您看。" data-en="You don't have to. We message you at every milestone. In a hurry, give our team your case number and we check right away.">不用您查。每个节点我们主动发消息给您，着急的话报单号给客服，马上帮您看。</p></details>
-    <details><summary data-zh="付款怎么付？" data-en="How do I pay?">付款怎么付？</summary><p data-zh="按客服给您的收款方式付，备注务必写「对接人-代码-金额」。写了我们立刻对账发货，不写要人工核对，会慢。" data-en="Pay as our team instructs, and always write the memo: handler-code-amount. With it we match and release fast; without it we have to check by hand.">按客服给您的收款方式付，备注务必写「对接人-代码-金额」。写了我们立刻对账发货，不写要人工核对，会慢。</p></details>
+  <section id="cred">
+    <h2 data-i18n="crd_t">资质与合作客户</h2>
+    <p class="sec-sub" data-i18n="crd_s">一级货代资质，长期服务知名制造企业</p>
+    <div class="badges">
+      <span class="badge" data-i18n="crd1">国家一级货运代理企业</span>
+      <span class="badge" data-i18n="crd2">AAA 物流企业</span>
+      <span class="badge" data-i18n="crd3">JCTRANS 会员单位</span>
+      <span class="badge" data-i18n="crd4">质量管理体系认证</span>
+    </div>
+    <div class="about-box"><p style="margin:0" data-i18n="crd_p">长期合作客户包括富士康（南宁、越南）、联想、仁宝等知名制造企业。</p></div>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n="con_t">联系我们</h2>
+    <p class="sec-sub" data-i18n="con_s">电话、邮件或微信，随时咨询</p>
+    <div class="contact-grid">
+      <div class="contact-card"><div class="k" data-i18n="con1">越南专线咨询</div><div class="v"><a href="tel:+8651255123090">0512-55123090</a></div></div>
+      <div class="contact-card"><div class="k" data-i18n="con2">服务热线</div><div class="v"><a href="tel:+8651255123080">0512-55123080</a></div></div>
+      <div class="contact-card"><div class="k" data-i18n="con_p1">周小姐 · 业务咨询</div><div class="v"><a href="tel:+8613862601889">138 6260 1889</a></div></div>
+      <div class="contact-card"><div class="k" data-i18n="con_p2">周经理 · 业务经理</div><div class="v"><a href="tel:+8618913253728">189 1325 3728</a></div></div>
+      <div class="contact-card"><div class="k" data-i18n="con3">外贸代理咨询</div><div class="v"><a href="tel:+8651255123091">0512-55123091</a></div></div>
+      <div class="contact-card"><div class="k" data-i18n="con_email">邮箱</div><div class="v"><a href="mailto:zhouzhen@jsbangda.com">zhouzhen@jsbangda.com</a></div></div>
+      <div class="contact-card"><div class="k" data-i18n="con_addr_l">地址</div><div style="font-weight:600" data-i18n="con_addr">江苏省昆山市开发区伟业路 18 号现代广场 A 座 1703–1707</div></div>
+      <div class="contact-card"><div class="k" data-i18n="con_hours_l">服务时间</div><div style="font-weight:600" data-i18n="con_hours">7×24 全年服务，节假日不休</div></div>
+    </div>
   </section>
 
   <section id="quote">
-    <h2 data-zh="询价" data-en="Get a quote">询价</h2>
-    <p class="sec-sub" data-zh="填完提交，直接进我们客服邮箱，工作时间很快回复，报价带代码。" data-en="Submit and it lands in our service inbox. We reply fast during work hours, always with a coded quote.">填完提交，直接进我们客服邮箱，工作时间很快回复，报价带代码。</p>
-    <form class="quote" onsubmit="alert('示例站：正式版这里会把表单发进公司邮箱'); return false;">
-      <div><label data-zh="发货地" data-en="From">发货地</label><input placeholder="比如：深圳"></div>
-      <div><label data-zh="目的地" data-en="To">目的地</label><input placeholder="比如：曼谷"></div>
-      <div><label data-zh="货物是什么" data-en="Goods">货物是什么</label><input placeholder="比如：服装"></div>
-      <div><label data-zh="重量 / 体积" data-en="Weight / volume">重量 / 体积</label><input placeholder="比如：500kg / 3方"></div>
-      <div class="full"><label data-zh="您的联系方式（WhatsApp / 微信 / 邮箱）" data-en="Your contact (WhatsApp / WeChat / email)">您的联系方式（WhatsApp / 微信 / 邮箱）</label><input placeholder="方便我们把报价发给您"></div>
-      <div class="full"><button type="submit" data-zh="提交询价" data-en="Send">提交询价</button></div>
+    <h2 data-i18n="frm_t">发送询价</h2>
+    <p class="sec-sub" data-i18n="frm_s">填好后点击发送，会打开您的邮箱并自动带上内容，发给我们的业务团队。</p>
+    <form class="quote" id="quoteForm">
+      <div><label data-i18n="f1">发货地</label><input id="q_from" data-i18n-ph="pf1" placeholder="例：昆山"></div>
+      <div><label data-i18n="f2">目的地</label><input id="q_to" data-i18n-ph="pf2" placeholder="例：河内"></div>
+      <div><label data-i18n="f3">货物类型</label><input id="q_goods" data-i18n-ph="pf3" placeholder="例：电子产品"></div>
+      <div><label data-i18n="f4">重量 / 体积</label><input id="q_weight" data-i18n-ph="pf4" placeholder="例：500kg / 3方"></div>
+      <div class="full"><label data-i18n="f5">联系方式（电话 / 微信 / 邮箱）</label><input id="q_contact" data-i18n-ph="pf5" placeholder="方便我们回复您"></div>
+      <div class="full"><button type="submit" data-i18n="fsend">发送询价</button></div>
     </form>
   </section>
 
@@ -128,23 +197,243 @@
 
 <footer>
   <div class="wrap">
-    <p><b data-zh="公司名 LOGISTICS" data-en="Company LOGISTICS">公司名 LOGISTICS</b></p>
-    <p data-zh="邮箱：service@company.com（示例） · 电话：+86-xxx-xxxx-xxxx（示例） · 工作时间：周一到周六 9:00–18:00" data-en="Email: service@company.com (sample) · Phone: +86-xxx (sample) · Hours: Mon–Sat 9:00–18:00">邮箱：service@company.com（示例） · 电话：+86-xxx-xxxx-xxxx（示例） · 工作时间：周一到周六 9:00–18:00</p>
-    <p data-zh="强项：东南亚双清包税到门 · 海运 / 空运 / 陆运" data-en="Focus: Southeast Asia all-in door-to-door · Sea / Air / Land">强项：东南亚双清包税到门 · 海运 / 空运 / 陆运</p>
+    <p><b data-i18n="ftr1">昆山邦达国际货运代理有限公司 · 邦达国际物流 BONDX</b></p>
+    <p><span data-i18n="ftr_site">官网</span>: <a href="https://www.jsbangda.com" target="_blank" rel="noopener">www.jsbangda.com</a> · <span data-i18n="con_fax">传真</span>: 0512-55123082</p>
+    <p>苏ICP备2025191545号 · 苏公网安备 32058302002063号</p>
   </div>
 </footer>
 
-<a class="wa-float" href="#" onclick="alert('示例站：正式版这里跳 WhatsApp'); return false;">WhatsApp 💬</a>
+<a class="wa-float" href="#contact" data-i18n="float_btn">联系客服</a>
 
 <script>
-let lang = 'zh';
-function toggleLang() {
-  lang = lang === 'zh' ? 'en' : 'zh';
-  document.querySelectorAll('[data-zh]').forEach(el => {
-    el.innerHTML = lang === 'zh' ? el.getAttribute('data-zh') : el.getAttribute('data-en');
-  });
-  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+const ZH = {}, ZHPH = {};
+document.querySelectorAll('[data-i18n]').forEach(el => { ZH[el.dataset.i18n] = el.innerHTML; });
+document.querySelectorAll('[data-i18n-ph]').forEach(el => { ZHPH[el.dataset.i18nPh] = el.getAttribute('placeholder'); });
+
+const T = {
+en: {
+  ttl: "BONDX Bangda International Logistics | Kunshan Freight Forwarder · Vietnam Line · Southeast Asia Logistics",
+  brand_sub: "Bangda International Logistics",
+  nav1: "Services", nav2: "Key Routes", nav3: "About Us", nav4: "Contact",
+  hero1: "Across the World, Delivered as Promised",
+  hero2: "Kunshan Bangda International Freight Forwarding Co., Ltd. is a Class-A international freight forwarder. Integrated sea, land, air and rail logistics with Southeast Asia lines at our core, at your service 7×24, all year round.",
+  hero3: "Get a Quote", hero4: "Explore Services",
+  st1l: "Founded", st2l: "Cities Covered", st3l: "Business Partners", st4l: "Successful Cases",
+  svc_t: "Our Services", svc_s: "Sea, land, air and rail, one-stop international logistics",
+  s1t: "Vietnam Land Line", s1d: "Exit via Pingxiang Friendship Pass to Hanoi, Bac Ninh, Bac Giang, Hai Phong and Ho Chi Minh City. Northern Vietnam in 24 hours. Our own 5,000 sqm consolidation warehouse, LCL and full-truck options.",
+  s2t: "South China Land Line", s2d: "Own warehouses, daily departures. Guangzhou, Dongguan, Nanning and Pingxiang in 24 hours, covering the main industrial and bonded zones of East and South China.",
+  s3t: "Ocean Freight", s3d: "FCL and LCL direct to Singapore, Tokyo, Busan, Bangkok, Hai Phong, Ho Chi Minh City, Jakarta, Port Klang and more. Bulk, refrigerated and dangerous goods accepted.",
+  s4t: "Air Freight", s4d: "Freighter capacity to Singapore, Tokyo, Bangkok, Hanoi, Dubai, Frankfurt, London, Los Angeles and New York. Inspection, customs, pickup and door delivery in one stop.",
+  s5t: "China-Europe Railway", s5d: "FCL and LCL in 20 days to Central Asia, Russia, Poland, Hamburg, Munich and Rotterdam, covering Eastern and Western Europe.",
+  s6t: "Batam Sea Line", s6d: "Fixed Shanghai – Singapore – Batam routing, ideal for steady electronics and manufacturing cargo.",
+  s7t: "Multi-Country Cross-Border Routes", s7d: "Through Pingxiang and Hanoi, one network links Vietnam, Laos, Thailand, Cambodia, Malaysia and Singapore.",
+  s8t: "Third-Party Logistics (3PL)", s8d: "Logistics solution design and full 3PL service, with a real-time cargo tracking platform, 365 days, 24 hours.",
+  s9t: "Foreign Trade Agency", s9d: "Import and export agency for goods and technology, foreign payments, automatic import licenses, 3C exemption and more.",
+  s10t: "Certification and Documentation", s10d: "Project approval and filing, E-port, exemption forms, manuals, electromechanical certificates, company filing, annual review and insurance agency.",
+  s11t: "Inland Transport", s11d: "Domestic air freight and inland container shipping, connecting our warehouses and ports.",
+  s12t: "Warehousing and Bonded Logistics", s12d: "Bonded warehousing, distribution, processing, customs clearance and transit trade in the Pingxiang Comprehensive Bonded Zone.",
+  rte_t: "Key Routes", rte_s: "Led by the Vietnam line, a cross-border network across Southeast Asia and rail direct to Europe",
+  r1t: "Vietnam Land Line", r1tag: "Flagship", r1d: "Cargo collected in Kunshan, Suzhou and Shanghai, via Nanning, exiting at Pingxiang Friendship Pass to Hanoi, Bac Ninh, Bac Giang, Haiyang, Hai Phong, Phu Tho and Ho Chi Minh City. Northern Vietnam in 24 hours.",
+  r2t: "Cross-Border Route 1", r2d: "China – Pingxiang – Lang Son (Friendship Pass) – Hanoi – Vientiane – Bangkok – Penang – Singapore",
+  r3t: "Cross-Border Route 2", r3d: "China – Pingxiang – Lang Son – Hanoi – Ho Chi Minh City",
+  r4t: "Cross-Border Route 3", r4d: "China – Pingxiang – Lang Son – Hanoi – Ho Chi Minh City – Phnom Penh – Bangkok – Penang – Singapore",
+  r5t: "China-Europe Railway", r5d: "20 days direct: Central Asia, Russia, Poland (for Eastern Europe), Hamburg (for Western Europe), Munich, Rotterdam",
+  abt_t: "About Bangda", abt_s: "Kunshan Bangda International Freight Forwarding Co., Ltd.",
+  abt_p1: "Founded in 2007 in Kunshan, the company is a Class-A international freight forwarder approved by the Ministry of Commerce and registered with the national business authority. We handle ocean, air, land and rail freight, warehousing and distribution, customs clearance, foreign-trade agency, international express, bonded logistics, and dangerous and cold-chain cargo.",
+  abt_p2: "Our philosophy: customers first, lasting partnerships, zero-error operations, and your requirements as our goal. Fair prices, complete service and sincere returns. We look forward to working with you.",
+  tl1x: "Bangda founded in Kunshan", tl2x: "Yourunde foreign-trade agency founded", tl3x: "Dongguan company and warehouse set up", tl4x: "Nanning and Pingxiang warehouses set up", tl5x: "Bangda offices opened in Hong Kong, Vietnam, Indonesia, Thailand and Malaysia: the Southeast Asia network takes shape",
+  crd_t: "Credentials and Clients", crd_s: "Class-A forwarder credentials, long-term partner of leading manufacturers",
+  crd1: "Class-A International Freight Forwarder", crd2: "AAA Logistics Enterprise", crd3: "JCTRANS Member", crd4: "ISO Quality Management Certified",
+  crd_p: "Long-term logistics partner of Foxconn (Nanning and Vietnam), Lenovo, Compal and other leading manufacturers.",
+  con_t: "Contact Us", con_s: "Reach us by phone, email or WeChat, anytime",
+  con1: "Vietnam Line Inquiries", con2: "Service Hotline", con3: "Trade Agency Inquiries",
+  con_p1: "Ms. Zhou · Sales", con_p2: "Manager Zhou · Sales Manager",
+  con_email: "Email", con_fax: "Fax", con_addr_l: "Address",
+  con_addr: "Rooms 1703–1707, Tower A, Modern Plaza, 18 Weiye Road, Development Zone, Kunshan, Jiangsu, China",
+  con_hours_l: "Service Hours", con_hours: "At your service 7×24, all year round",
+  frm_t: "Send an Inquiry", frm_s: "Fill in the form and click send: your email app will open with everything filled in, addressed to our sales team.",
+  f1: "From", f2: "To", f3: "Goods", f4: "Weight / Volume", f5: "Your Contact (phone / WeChat / email)", fsend: "Send Inquiry",
+  pf1: "e.g. Kunshan", pf2: "e.g. Hanoi", pf3: "e.g. Electronics", pf4: "e.g. 500 kg / 3 cbm", pf5: "So we can reply to you",
+  ftr1: "Kunshan Bangda International Freight Forwarding Co., Ltd. · BONDX Bangda International Logistics",
+  ftr_site: "Website", float_btn: "Contact Us", subj: "Website Inquiry"
+},
+vi: {
+  ttl: "BONDX Bangda International Logistics | Giao nhận quốc tế Côn Sơn · Chuyên tuyến Việt Nam · Logistics Đông Nam Á",
+  brand_sub: "Logistics Quốc tế Bangda",
+  nav1: "Dịch vụ", nav2: "Tuyến trọng điểm", nav3: "Về chúng tôi", nav4: "Liên hệ",
+  hero1: "Vươn ra toàn cầu, giao hàng đúng cam kết",
+  hero2: "Công ty TNHH Đại lý Vận tải Quốc tế Bangda Côn Sơn là doanh nghiệp giao nhận quốc tế hạng nhất (Class-A). Vận tải biển, bộ, hàng không và đường sắt tích hợp, lấy chuyên tuyến Đông Nam Á làm cốt lõi, phục vụ 7×24 quanh năm.",
+  hero3: "Báo giá ngay", hero4: "Xem dịch vụ",
+  st1l: "Thành lập", st2l: "Thành phố phủ sóng", st3l: "Đối tác kinh doanh", st4l: "Dự án thành công",
+  svc_t: "Dịch vụ của chúng tôi", svc_s: "Đường biển, đường bộ, hàng không, đường sắt, logistics quốc tế một điểm dừng",
+  s1t: "Chuyên tuyến đường bộ Việt Nam", s1d: "Xuất cảnh qua cửa khẩu Hữu Nghị, Bằng Tường, đi thẳng Hà Nội, Bắc Ninh, Bắc Giang, Hải Phòng và TP. Hồ Chí Minh. Bắc Việt Nam chỉ 24 giờ. Kho gom hàng 5.000 m² của công ty, linh hoạt ghép hàng và xe nguyên chuyến.",
+  s2t: "Chuyên tuyến đường bộ Hoa Nam", s2d: "Kho riêng, khởi hành mỗi ngày. Quảng Châu, Đông Quan, Nam Ninh, Bằng Tường trong 24 giờ, phủ sóng các khu công nghiệp và khu ngoại quan chính của Hoa Đông và Hoa Nam.",
+  s3t: "Vận tải biển xuất nhập khẩu", s3d: "Nguyên container (FCL) và lẻ (LCL) đi thẳng Singapore, Tokyo, Busan, Bangkok, Hải Phòng, TP. Hồ Chí Minh, Jakarta, Port Klang và nhiều cảng lớn khác. Nhận hàng rời, hàng lạnh và hàng nguy hiểm.",
+  s4t: "Vận tải hàng không xuất nhập khẩu", s4d: "Tải máy bay chở hàng đi thẳng Singapore, Tokyo, Bangkok, Hà Nội, Dubai, Frankfurt, London, Los Angeles, New York. Kiểm hóa, khai quan, nhận hàng và giao tận nơi trong một điểm dừng.",
+  s5t: "Tàu liên vận Trung Quốc – Châu Âu", s5d: "Nguyên container và lẻ, 20 ngày đi thẳng Trung Á, Nga, Ba Lan, Hamburg, Munich, Rotterdam, phủ sóng Đông Âu và Tây Âu.",
+  s6t: "Chuyên tuyến biển Batam", s6d: "Tuyến cố định Thượng Hải – Singapore – Batam, phù hợp cho hàng điện tử và sản xuất cần xuất đều đặn.",
+  s7t: "Tuyến xuyên biên giới đa quốc gia", s7d: "Qua Bằng Tường và Hà Nội, một mạng lưới nối Việt Nam, Lào, Thái Lan, Campuchia, Malaysia và Singapore.",
+  s8t: "Logistics bên thứ ba (3PL)", s8d: "Thiết kế giải pháp logistics và dịch vụ 3PL toàn diện, nền tảng tra cứu tình trạng hàng theo thời gian thực, 365 ngày, 24 giờ.",
+  s9t: "Đại lý ngoại thương", s9d: "Đại lý xuất nhập khẩu hàng hóa và công nghệ, thanh toán ngoại tệ, giấy phép nhập khẩu tự động, miễn 3C và nhiều dịch vụ khác.",
+  s10t: "Dịch vụ chứng nhận và chứng từ", s10d: "Thẩm định và đăng ký dự án, cửa khẩu điện tử, biểu miễn, sổ tay, chứng chỉ cơ điện, đăng ký doanh nghiệp, kiểm tra hàng năm và đại lý bảo hiểm.",
+  s11t: "Vận tải nội địa", s11d: "Hàng không nội địa và vận tải container đường biển nội địa, nối các kho và cửa khẩu của công ty.",
+  s12t: "Kho bãi và logistics ngoại quan", s12d: "Kho ngoại quan, phân phối, gia công lưu thông, khai quan và thương mại chuyển khẩu tại Khu ngoại quan tổng hợp Bằng Tường.",
+  rte_t: "Tuyến trọng điểm", rte_s: "Lấy chuyên tuyến Việt Nam làm chủ lực, mạng lưới xuyên biên giới khắp Đông Nam Á, tàu liên vận đi thẳng châu Âu",
+  r1t: "Chuyên tuyến đường bộ Việt Nam", r1tag: "Chủ lực", r1d: "Gom hàng tại Côn Sơn, Tô Châu, Thượng Hải, qua Nam Ninh, xuất cảnh cửa khẩu Hữu Nghị, Bằng Tường, đi thẳng Hà Nội, Bắc Ninh, Bắc Giang, Hải Dương, Hải Phòng, Phú Thọ và TP. Hồ Chí Minh. Bắc Việt Nam 24 giờ.",
+  r2t: "Tuyến xuyên biên giới 1", r2d: "Trung Quốc – Bằng Tường – Lạng Sơn (Hữu Nghị) – Hà Nội – Viêng Chăn – Bangkok – Penang – Singapore",
+  r3t: "Tuyến xuyên biên giới 2", r3d: "Trung Quốc – Bằng Tường – Lạng Sơn – Hà Nội – TP. Hồ Chí Minh",
+  r4t: "Tuyến xuyên biên giới 3", r4d: "Trung Quốc – Bằng Tường – Lạng Sơn – Hà Nội – TP. Hồ Chí Minh – Phnom Penh – Bangkok – Penang – Singapore",
+  r5t: "Tàu liên vận Trung – Âu", r5d: "20 ngày đi thẳng: Trung Á, Nga, Ba Lan (chuyển Đông Âu), Hamburg (chuyển Tây Âu), Munich, Rotterdam",
+  abt_t: "Về Bangda", abt_s: "Công ty TNHH Đại lý Vận tải Quốc tế Bangda Côn Sơn",
+  abt_p1: "Thành lập năm 2007 tại Côn Sơn, công ty là doanh nghiệp giao nhận quốc tế hạng nhất được Bộ Thương mại phê duyệt và đăng ký tại cơ quan công thương quốc gia. Công ty kinh doanh vận tải biển, hàng không, đường bộ, đường sắt, kho bãi và phân phối, khai quan, đại lý ngoại thương, chuyển phát quốc tế, logistics ngoại quan, hàng nguy hiểm và hàng chuỗi lạnh.",
+  abt_p2: "Triết lý phục vụ: khách hàng trên hết, hợp tác lâu dài, tỷ lệ lỗi bằng không, yêu cầu của khách hàng là mục tiêu theo đuổi. Giá ưu đãi, dịch vụ hoàn thiện, đáp lại chân thành. Rất mong được hợp tác cùng quý khách.",
+  tl1x: "Bangda thành lập tại Côn Sơn", tl2x: "Công ty đại lý ngoại thương Yourunde thành lập", tl3x: "Thành lập công ty và kho tại Đông Quan", tl4x: "Thành lập kho tại Nam Ninh và Bằng Tường", tl5x: "Lần lượt thành lập Bangda tại Hồng Kông, Việt Nam, Indonesia, Thái Lan và Malaysia, hoàn thiện mạng lưới Đông Nam Á",
+  crd_t: "Chứng nhận và khách hàng", crd_s: "Tư cách giao nhận hạng nhất, đối tác lâu dài của các nhà sản xuất lớn",
+  crd1: "Doanh nghiệp giao nhận hạng nhất quốc gia", crd2: "Doanh nghiệp logistics AAA", crd3: "Thành viên JCTRANS", crd4: "Chứng nhận hệ thống quản lý chất lượng",
+  crd_p: "Đối tác logistics lâu dài của Foxconn (Nam Ninh, Việt Nam), Lenovo, Compal và nhiều doanh nghiệp sản xuất lớn.",
+  con_t: "Liên hệ với chúng tôi", con_s: "Điện thoại, email hoặc WeChat, tư vấn bất cứ lúc nào",
+  con1: "Tư vấn chuyên tuyến Việt Nam", con2: "Đường dây nóng", con3: "Tư vấn đại lý ngoại thương",
+  con_p1: "Chị Châu · Kinh doanh", con_p2: "Anh Châu · Quản lý kinh doanh",
+  con_email: "Email", con_fax: "Fax", con_addr_l: "Địa chỉ",
+  con_addr: "Phòng 1703–1707, Tòa A, Modern Plaza, 18 đường Weiye, Khu phát triển, Côn Sơn, Giang Tô, Trung Quốc",
+  con_hours_l: "Thời gian phục vụ", con_hours: "Phục vụ 7×24, quanh năm không nghỉ",
+  frm_t: "Gửi yêu cầu báo giá", frm_s: "Điền xong và nhấn gửi, ứng dụng email của bạn sẽ mở với nội dung đã điền sẵn, gửi tới đội ngũ kinh doanh của chúng tôi.",
+  f1: "Nơi đi", f2: "Nơi đến", f3: "Loại hàng", f4: "Trọng lượng / Thể tích", f5: "Liên hệ của bạn (điện thoại / WeChat / email)", fsend: "Gửi yêu cầu",
+  pf1: "Ví dụ: Côn Sơn", pf2: "Ví dụ: Hà Nội", pf3: "Ví dụ: Hàng điện tử", pf4: "Ví dụ: 500 kg / 3 m³", pf5: "Để chúng tôi liên hệ lại với bạn",
+  ftr1: "Công ty TNHH Đại lý Vận tải Quốc tế Bangda Côn Sơn · BONDX Bangda International Logistics",
+  ftr_site: "Website", float_btn: "Liên hệ ngay", subj: "Yêu cầu báo giá từ website"
+},
+ja: {
+  ttl: "BONDX 邦達国際物流 | 昆山国際貨物代理 · ベトナム専線 · 東南アジア物流",
+  brand_sub: "邦達国際物流",
+  nav1: "サービス", nav2: "主要ルート", nav3: "会社案内", nav4: "お問い合わせ",
+  hero1: "世界を駆け、必ず届ける",
+  hero2: "昆山邦達国際貨運代理有限公司は、国家一級国際貨物代理企業です。海・陸・空・鉄道を一体化した物流サービス、東南アジア専線を中核に、7×24・年中無休で対応します。",
+  hero3: "見積もり依頼", hero4: "サービスを見る",
+  st1l: "創業", st2l: "カバー都市", st3l: "提携パートナー", st4l: "成功事例",
+  svc_t: "サービス", svc_s: "海・陸・空・鉄道の全チャネルをワンストップで",
+  s1t: "ベトナム陸運専線", s1d: "憑祥・友誼関から出境し、ハノイ、バクニン、バクザン、ハイフォン、ホーチミンへ直行。北ベトナムは24時間。自社5,000㎡の分撥倉庫で、混載・貸切に柔軟対応。",
+  s2t: "華南陸運専線", s2d: "自社倉庫から毎日出発。広州、東莞、南寧、憑祥は24時間直行。華東・華南の主要工業区と保税区をカバー。",
+  s3t: "海運輸出入", s3d: "FCL・LCLでシンガポール、東京、釜山、バンコク、ハイフォン、ホーチミン、ジャカルタ、ポートクランなど主要港へ直行。バルク、冷蔵、危険品も対応。",
+  s4t: "航空輸出入", s4d: "全貨物機の板取り直行便でシンガポール、東京、バンコク、ハノイ、ドバイ、フランクフルト、ロンドン、ロサンゼルス、ニューヨークへ。検疫、通関、引取、ドア配送までワンストップ。",
+  s5t: "中欧班列（鉄道）", s5d: "FCL・LCLで20日直行。中央アジア、ロシア、ポーランド、ハンブルク、ミュンヘン、ロッテルダム、東欧・西欧全域へ。",
+  s6t: "バタム島海運専線", s6d: "上海―シンガポール―バタムの固定航路。電子・製造業の安定出荷に最適。",
+  s7t: "多国間クロスボーダールート", s7d: "憑祥・ハノイ経由で、ベトナム、ラオス、タイ、カンボジア、マレーシア、シンガポールを一つのネットワークで連結。",
+  s8t: "サードパーティ・ロジスティクス（3PL）", s8d: "物流ソリューション設計と3PL総合サービス。貨物状況をリアルタイムで確認できるプラットフォーム、365日24時間対応。",
+  s9t: "貿易代理", s9d: "各種商品・技術の輸出入代理、対外送金、自動輸入許可証、3C免除などワンストップ貿易サービス。",
+  s10t: "認証・書類サービス", s10d: "プロジェクト審査・届出、電子口岸、免税表、マニュアル、機電証、企業届出・年次審査、保険代理。",
+  s11t: "内陸輸送", s11d: "国内航空輸送と内航コンテナ輸送で、自社倉庫と各口岸を接続。",
+  s12t: "倉庫・保税物流", s12d: "憑祥総合保税区での保税保管、配送、流通加工、通関、転口貿易。",
+  rte_t: "主要ルート", rte_s: "ベトナム専線を主力に、東南アジアを貫く跨境ネットワークと欧州直行鉄道",
+  r1t: "ベトナム陸運専線", r1tag: "主力", r1d: "昆山、蘇州、上海で集荷し、南寧を経て憑祥・友誼関から出境。ハノイ、バクニン、バクザン、ハイズオン、ハイフォン、フートー、ホーチミンへ直行。北ベトナム24時間。",
+  r2t: "跨境ルート1", r2d: "中国 ― 憑祥 ― ランソン（友誼関）― ハノイ ― ビエンチャン ― バンコク ― ペナン ― シンガポール",
+  r3t: "跨境ルート2", r3d: "中国 ― 憑祥 ― ランソン ― ハノイ ― ホーチミン",
+  r4t: "跨境ルート3", r4d: "中国 ― 憑祥 ― ランソン ― ハノイ ― ホーチミン ― プノンペン ― バンコク ― ペナン ― シンガポール",
+  r5t: "中欧班列", r5d: "20日直行：中央アジア、ロシア、ポーランド（東欧へ中継）、ハンブルク（西欧へ中継）、ミュンヘン、ロッテルダム",
+  abt_t: "邦達について", abt_s: "昆山邦達国際貨運代理有限公司",
+  abt_p1: "2007年に昆山で設立され、国家商務部の承認と国家工商局の登録を受けた一級国際貨物代理企業です。海運、空運、陸運、鉄道、倉庫・配送、通関、外貿代理、国際宅配、保税物流、危険品・コールドチェーン貨物を取り扱います。",
+  abt_p2: "理念は「顧客第一、永続経営」。業務エラーゼロを掲げ、お客様のご要望こそが私たちの追求です。お得な価格、充実したサービス、真心のこもったお返しで、ご協力をお待ちしています。",
+  tl1x: "昆山邦達を設立", tl2x: "友潤得貿易代理会社を設立", tl3x: "東莞会社と倉庫を設立", tl4x: "南寧、憑祥倉庫を設立", tl5x: "香港、ベトナム、インドネシア、タイ、マレーシアに邦達を順次設立、東南アジアネットワークが完成",
+  crd_t: "資格と主要顧客", crd_s: "一級貨代の資格、大手メーカーの長期パートナー",
+  crd1: "国家一級貨物代理企業", crd2: "AAA物流企業", crd3: "JCTRANS会員", crd4: "品質マネジメントシステム認証",
+  crd_p: "フォックスコン（南寧、ベトナム）、レノボ、コンパルなど大手メーカーの長期物流パートナーです。",
+  con_t: "お問い合わせ", con_s: "電話、メール、WeChatでいつでもご相談ください",
+  con1: "ベトナム専線のご相談", con2: "サービスホットライン", con3: "貿易代理のご相談",
+  con_p1: "周（しゅう）担当 · 営業", con_p2: "周マネージャー · 営業責任者",
+  con_email: "メール", con_fax: "FAX", con_addr_l: "住所",
+  con_addr: "中国江蘇省昆山市開発区偉業路18号 現代広場A棟1703–1707",
+  con_hours_l: "対応時間", con_hours: "7×24・年中無休で対応",
+  frm_t: "見積もり依頼を送る", frm_s: "入力して送信すると、メールアプリが開き、内容が入力された状態で当社営業チームへ送信できます。",
+  f1: "出発地", f2: "目的地", f3: "貨物の種類", f4: "重量 / 容積", f5: "ご連絡先（電話 / WeChat / メール）", fsend: "送信する",
+  pf1: "例：昆山", pf2: "例：ハノイ", pf3: "例：電子製品", pf4: "例：500kg / 3㎥", pf5: "返信先をご入力ください",
+  ftr1: "昆山邦達国際貨運代理有限公司 · BONDX 邦達国際物流",
+  ftr_site: "公式サイト", float_btn: "お問い合わせ", subj: "ウェブサイトからの見積もり依頼"
+},
+ko: {
+  ttl: "BONDX 방다 국제물류 | 쿤산 국제 화물 대리 · 베트남 전용선 · 동남아 물류",
+  brand_sub: "방다 국제물류",
+  nav1: "서비스", nav2: "핵심 노선", nav3: "회사 소개", nav4: "문의하기",
+  hero1: "세계를 누비며, 반드시 도착합니다",
+  hero2: "쿤산 방다 국제화물대리 유한공사는 국가 1급 국제 화물 대리 기업입니다. 해운, 육운, 항공, 철도를 아우르는 종합 물류 서비스, 동남아 전용선을 핵심으로 7×24 연중무휴로 모십니다.",
+  hero3: "견적 문의", hero4: "서비스 보기",
+  st1l: "설립", st2l: "커버 도시", st3l: "협력 파트너", st4l: "성공 사례",
+  svc_t: "서비스", svc_s: "해상, 육상, 항공, 철도 전 채널 원스톱 국제 물류",
+  s1t: "베트남 육운 전용선", s1d: "핑샹 우의관을 통해 출경하여 하노이, 박닌, 박장, 하이퐁, 호찌민 직행. 북부 베트남 24시간 도착. 자체 5,000㎡ 분배 창고로 혼재와 전세 차량 모두 유연하게 운영합니다.",
+  s2t: "화남 육운 전용선", s2d: "자체 창고에서 매일 출발. 광저우, 둥관, 난닝, 핑샹 24시간 직행. 화동과 화남의 주요 공업구와 보세구를 커버합니다.",
+  s3t: "해운 수출입", s3d: "FCL과 LCL로 싱가포르, 도쿄, 부산, 방콕, 하이퐁, 호찌민, 자카르타, 포트클랑 등 주요 항만 직행. 벌크, 냉장, 위험물도 취급합니다.",
+  s4t: "항공 수출입", s4d: "전 화물기 팔레트 직행으로 싱가포르, 도쿄, 방콕, 하노이, 두바이, 프랑크푸르트, 런던, 로스앤젤레스, 뉴욕까지. 검역, 통관, 픽업, 도어 배송을 원스톱으로 제공합니다.",
+  s5t: "중국-유럽 화물열차", s5d: "FCL과 LCL 20일 직행. 중앙아시아, 러시아, 폴란드, 함부르크, 뮌헨, 로테르담, 동유럽과 서유럽 전역을 커버합니다.",
+  s6t: "바탐섬 해운 전용선", s6d: "상하이 – 싱가포르 – 바탐 고정 항로. 전자, 제조 화물의 안정적인 출하에 적합합니다.",
+  s7t: "다국가 크로스보더 노선", s7d: "핑샹과 하노이를 거쳐 베트남, 라오스, 태국, 캄보디아, 말레이시아, 싱가포르를 하나의 네트워크로 연결합니다.",
+  s8t: "제3자 물류(3PL)", s8d: "물류 솔루션 설계와 3PL 종합 서비스. 화물 현황 실시간 조회 플랫폼, 365일 24시간 대응.",
+  s9t: "무역 대리", s9d: "각종 상품과 기술의 수출입 대리, 대외 송금, 자동 수입 허가증, 3C 면제 등 원스톱 무역 서비스.",
+  s10t: "인증 및 서류 서비스", s10d: "프로젝트 심사·등록, 전자통관, 면세표, 매뉴얼, 기계전자증, 기업 등록과 연차 심사, 보험 대리.",
+  s11t: "내륙 운송", s11d: "국내 항공 운송과 내해 컨테이너 운송으로 자체 창고와 각 통관장을 연결합니다.",
+  s12t: "창고 및 보세 물류", s12d: "핑샹 종합 보세구에서의 보세 보관, 분배 배송, 유통 가공, 통관과 중계 무역.",
+  rte_t: "핵심 노선", rte_s: "베트남 전용선을 주력으로, 동남아를 관통하는 크로스보더 네트워크와 유럽 직행 철도",
+  r1t: "베트남 육운 전용선", r1tag: "주력", r1d: "쿤산, 쑤저우, 상하이에서 집하하여 난닝을 거쳐 핑샹 우의관으로 출경. 하노이, 박닌, 박장, 하이즈엉, 하이퐁, 푸토, 호찌민 직행. 북부 베트남 24시간.",
+  r2t: "크로스보더 노선 1", r2d: "중국 – 핑샹 – 랑선(우의관) – 하노이 – 비엔티안 – 방콕 – 페낭 – 싱가포르",
+  r3t: "크로스보더 노선 2", r3d: "중국 – 핑샹 – 랑선 – 하노이 – 호찌민",
+  r4t: "크로스보더 노선 3", r4d: "중국 – 핑샹 – 랑선 – 하노이 – 호찌민 – 프놈펜 – 방콕 – 페낭 – 싱가포르",
+  r5t: "중국-유럽 화물열차", r5d: "20일 직행: 중앙아시아, 러시아, 폴란드(동유럽 중계), 함부르크(서유럽 중계), 뮌헨, 로테르담",
+  abt_t: "방다 소개", abt_s: "쿤산 방다 국제화물대리 유한공사",
+  abt_p1: "2007년 쿤산에서 설립되었으며, 국가 상무부의 승인과 국가 공상국 등록을 받은 1급 국제 화물 대리 기업입니다. 해운, 항공, 육운, 철도, 창고와 배송, 통관, 무역 대리, 국제 특송, 보세 물류, 위험물과 콜드체인 화물을 취급합니다.",
+  abt_p2: "서비스 이념은 고객 최우선, 지속 경영입니다. 업무 오류율 제로를 지향하며, 고객의 요구가 곧 저희의 목표입니다. 합리적인 가격, 완비된 서비스, 진심 어린 보답으로 협력을 기다립니다.",
+  tl1x: "쿤산 방다 설립", tl2x: "유룬더 무역 대리 회사 설립", tl3x: "둥관 회사와 창고 설립", tl4x: "난닝, 핑샹 창고 설립", tl5x: "홍콩, 베트남, 인도네시아, 태국, 말레이시아에 방다를 차례로 설립, 동남아 네트워크 완성",
+  crd_t: "자격과 주요 고객", crd_s: "1급 화물 대리 자격, 유명 제조사들의 장기 파트너",
+  crd1: "국가 1급 화물 대리 기업", crd2: "AAA 물류 기업", crd3: "JCTRANS 회원", crd4: "품질 경영 시스템 인증",
+  crd_p: "폭스콘(난닝, 베트남), 레노버, 컴팔 등 유명 제조사들의 장기 물류 파트너입니다.",
+  con_t: "문의하기", con_s: "전화, 이메일, 위챗으로 언제든 상담하세요",
+  con1: "베트남 전용선 상담", con2: "서비스 핫라인", con3: "무역 대리 상담",
+  con_p1: "저우 담당 · 영업", con_p2: "저우 매니저 · 영업 책임자",
+  con_email: "이메일", con_fax: "팩스", con_addr_l: "주소",
+  con_addr: "중국 장쑤성 쿤산시 개발구 웨이예로 18호 현대광장 A동 1703–1707",
+  con_hours_l: "서비스 시간", con_hours: "7×24 연중무휴 서비스",
+  frm_t: "견적 문의 보내기", frm_s: "작성 후 보내기를 누르면 이메일 앱이 열리고 내용이 자동으로 입력되어 영업팀에 전송됩니다.",
+  f1: "출발지", f2: "도착지", f3: "화물 종류", f4: "중량 / 부피", f5: "연락처(전화 / 위챗 / 이메일)", fsend: "보내기",
+  pf1: "예: 쿤산", pf2: "예: 하노이", pf3: "예: 전자제품", pf4: "예: 500kg / 3㎥", pf5: "회신받을 연락처를 입력하세요",
+  ftr1: "쿤산 방다 국제화물대리 유한공사 · BONDX 방다 국제물류",
+  ftr_site: "공식 사이트", float_btn: "문의하기", subj: "웹사이트 견적 문의"
 }
+};
+
+let curLang = 'zh';
+function setLang(l) {
+  curLang = l;
+  const dict = l === 'zh' ? ZH : (T[l] || {});
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if (dict[k] !== undefined) el.innerHTML = dict[k];
+  });
+  const phDict = l === 'zh' ? ZHPH : (T[l] || {});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const k = el.dataset.i18nPh;
+    if (phDict[k] !== undefined) el.setAttribute('placeholder', phDict[k]);
+  });
+  document.documentElement.lang = { zh: 'zh-CN', en: 'en', vi: 'vi', ja: 'ja', ko: 'ko' }[l];
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  try { localStorage.setItem('bondx-lang', l); } catch (e) {}
+}
+(function () {
+  let saved = 'zh';
+  try { saved = localStorage.getItem('bondx-lang') || 'zh'; } catch (e) {}
+  if (['zh','en','vi','ja','ko'].includes(saved) && saved !== 'zh') setLang(saved);
+})();
+
+document.getElementById('quoteForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const g = id => document.getElementById(id).value.trim();
+  const subj = (T[curLang] && T[curLang].subj) || '网站询价';
+  const lines = [
+    '发货地: ' + g('q_from'),
+    '目的地: ' + g('q_to'),
+    '货物类型: ' + g('q_goods'),
+    '重量/体积: ' + g('q_weight'),
+    '联系方式: ' + g('q_contact')
+  ];
+  const url = 'mailto:zhouzhen@jsbangda.com?subject=' + encodeURIComponent(subj + ' ' + g('q_from') + ' → ' + g('q_to')) + '&body=' + encodeURIComponent(lines.join('\n'));
+  window.location.href = url;
+});
 </script>
 </body>
 </html>
