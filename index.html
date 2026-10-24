@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>东南亚专线货代 · 双清包税到门</title>
+<style>
+  :root { --teal:#0E5F56; --teal-dark:#093f39; --orange:#FF7A1A; --ink:#1d2b28; --bg:#f7faf9; --line:#dce8e5; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+  header { background:var(--teal); color:#fff; padding:14px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+  header .logo { font-size:20px; font-weight:700; letter-spacing:1px; }
+  header .logo span { color:var(--orange); }
+  .lang-btn { background:transparent; color:#fff; border:1px solid rgba(255,255,255,.6); border-radius:20px; padding:5px 14px; cursor:pointer; font-size:13px; }
+  .wrap { max-width:1020px; margin:0 auto; padding:0 18px; }
+  .hero { background:linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 100%); color:#fff; padding:56px 0 64px; text-align:center; }
+  .hero h1 { font-size:34px; line-height:1.35; margin-bottom:14px; }
+  .hero h1 .hl { color:var(--orange); }
+  .hero p { font-size:17px; opacity:.92; max-width:640px; margin:0 auto 26px; }
+  .cta-row { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:13px 30px; border-radius:30px; font-size:16px; font-weight:600; text-decoration:none; }
+  .btn-orange { background:var(--orange); color:#fff; }
+  .btn-ghost { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.75); }
+  section { padding:44px 0 8px; }
+  h2 { font-size:24px; color:var(--teal-dark); margin-bottom:6px; }
+  .sec-sub { color:#5c6f6a; margin-bottom:20px; font-size:15px; }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  th { background:var(--teal); color:#fff; text-align:left; padding:12px 14px; font-size:14px; }
+  td { padding:12px 14px; border-top:1px solid var(--line); font-size:15px; }
+  tr td:first-child { font-weight:600; }
+  .code { display:inline-block; background:#e6f2f0; color:var(--teal-dark); border-radius:5px; padding:1px 8px; font-size:13px; font-weight:700; }
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .step { background:#fff; border-radius:12px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .step .num { width:34px; height:34px; border-radius:50%; background:var(--orange); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
+  .step h3 { font-size:17px; margin-bottom:6px; color:var(--teal-dark); }
+  .step p { font-size:14px; color:#44554f; }
+  .docs { background:#fff; border-radius:12px; padding:20px 24px; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+  .docs li { margin:6px 0 6px 18px; font-size:15px; }
+  details { background:#fff; border-radius:10px; padding:14px 18px; margin-bottom:10px; box-shadow:0 1px 3px rgba(0,0,0,.05); }
+  summary { font-weight:600; cursor:pointer; color:var(--teal-dark); }
+  details p { margin-top:8px; font-size:14px; color:#44554f; }
+  form.quote { background:#fff; border-radius:12px; padding:22px; box-shadow:0 1px 4px rgba(0,0,0,.06); display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  form.quote label { font-size:13px; color:#5c6f6a; display:block; margin-bottom:4px; }
+  form.quote input, form.quote select { width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; font-size:15px; font-family:inherit; }
+  form.quote .full { grid-column:span 2; }
+  form.quote button { background:var(--orange); color:#fff; border:none; border-radius:30px; padding:13px; font-size:16px; font-weight:600; cursor:pointer; width:100%; }
+  footer { margin-top:48px; background:var(--teal-dark); color:#d7e8e4; padding:28px 0; font-size:14px; }
+  footer b { color:#fff; }
+  .wa-float { position:fixed; right:18px; bottom:18px; background:#25D366; color:#fff; border-radius:30px; padding:12px 20px; font-weight:600; text-decoration:none; box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:15px; }
+  @media (max-width:760px){ .steps{grid-template-columns:1fr;} .hero h1{font-size:27px;} form.quote{grid-template-columns:1fr;} form.quote .full{grid-column:span 1;} }
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="logo">公司名 <span>LOGISTICS</span></div>
+  <button class="lang-btn" onclick="toggleLang()">中 / EN</button>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1 data-zh="中国到东南亚，<span class='hl'>双清包税到门</span><br>一个全包价，剩下的我们办" data-en="China to Southeast Asia, <span class='hl'>all-in, door to door</span><br>One price. We handle the rest.">中国到东南亚，<span class="hl">双清包税到门</span><br>一个全包价，剩下的我们办</h1>
+    <p data-zh="运费、报关、清关、税、派送全包。不用您懂流程，把货和信息给我们，坐等签收。" data-en="Freight, export customs, clearance, tax and delivery, all included. Hand us the cargo and the details, then just wait for delivery.">运费、报关、清关、税、派送全包。不用您懂流程，把货和信息给我们，坐等签收。</p>
+    <div class="cta-row">
+      <a class="btn btn-orange" href="#quote" data-zh="马上询价" data-en="Get a quote">马上询价</a>
+      <a class="btn btn-ghost" href="#routes" data-zh="看线路和时效" data-en="See routes">看线路和时效</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section id="routes">
+    <h2 data-zh="线路 · 时效 · 参考价" data-en="Routes, transit time, reference rates">线路 · 时效 · 参考价</h2>
+    <p class="sec-sub" data-zh="每条线都有一个代码，报价和付款都用它对账。价格是参考，确切价问客服拿，报给您的一定带代码。" data-en="Every route has a code. Quotes and payments use it, so accounts always match. Rates are for reference; your confirmed quote always comes with its code.">每条线都有一个代码，报价和付款都用它对账。价格是参考，确切价问客服拿，报给您的一定带代码。</p>
+    <table>
+      <tr><th data-zh="线路" data-en="Route">线路</th><th data-zh="代码" data-en="Code">代码</th><th data-zh="方式" data-en="Mode">方式</th><th data-zh="时效" data-en="Transit">时效</th><th data-zh="参考价（示例）" data-en="Reference (sample)">参考价（示例）</th></tr>
+      <tr><td>深圳 → 曼谷（泰国）</td><td><span class="code">1a</span></td><td>海运双清到门</td><td>6–9 天</td><td>¥—/kg 起</td></tr>
+      <tr><td>广州 → 胡志明（越南）</td><td><span class="code">2a</span></td><td>陆运 / 海运</td><td>3–6 天</td><td>¥—/kg 起</td></tr>
+      <tr><td>深圳 → 吉隆坡（马来西亚）</td><td><span class="code">3a</span></td><td>空运 / 海运</td><td>4–7 天</td><td>¥—/kg 起</td></tr>
+      <tr><td>义乌 → 雅加达（印度尼西亚）</td><td><span class="code">4a</span></td><td>海运双清到门</td><td>12–15 天</td><td>¥—/方 起</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2 data-zh="下单就三步" data-en="Three steps to ship">下单就三步</h2>
+    <p class="sec-sub" data-zh="不用注册，不用下载 App。" data-en="No sign-up, no app to download.">不用注册，不用下载 App。</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3 data-zh="发信息拿报价" data-en="Send details, get a quote">发信息拿报价</h3><p data-zh="把发货地、目的地、货是什么、多重多大发我们，报价带代码给您，全包多少一目了然。" data-en="Send origin, destination, goods, weight and size. Your quote comes with its code and the all-in amount.">把发货地、目的地、货是什么、多重多大发我们，报价带代码给您，全包多少一目了然。</p></div>
+      <div class="step"><div class="num">2</div><h3 data-zh="发货付款带备注" data-en="Ship and pay with the memo">发货付款带备注</h3><p data-zh="货发到我们仓库，付款时备注写「对接人-代码-金额」，比如 Harry-1a-2800，我们一秒对上账。" data-en="Send cargo to our warehouse. Put the memo on your payment: handler-code-amount, e.g. Harry-1a-2800, and we match it instantly.">货发到我们仓库，付款时备注写「对接人-代码-金额」，比如 Harry-1a-2800，我们一秒对上账。</p></div>
+      <div class="step"><div class="num">3</div><h3 data-zh="等通知签收" data-en="Get updates, sign on delivery">等通知签收</h3><p data-zh="出库、到港、清关、派送，每个节点我们主动通知您，不用您天天来问。最后送到门上签收。" data-en="We message you at every milestone: out of warehouse, arrived, cleared, out for delivery. No need to chase us.">出库、到港、清关、派送，每个节点我们主动通知您，不用您天天来问。最后送到门上签收。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-zh="发货要准备什么" data-en="What to prepare">发货要准备什么</h2>
+    <div class="docs">
+      <ul>
+        <li data-zh="货物清单：品名、数量、重量、体积" data-en="Cargo list: item names, quantity, weight, volume">货物清单：品名、数量、重量、体积</li>
+        <li data-zh="收货人信息：姓名、电话、详细地址" data-en="Receiver: name, phone, full address">收货人信息：姓名、电话、详细地址</li>
+        <li data-zh="带电、液体、品牌货提前说，我们先确认能不能走" data-en="Batteries, liquids or branded goods: tell us first, we confirm before shipping">带电、液体、品牌货提前说，我们先确认能不能走</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-zh="常见问题" data-en="FAQ">常见问题</h2>
+    <details><summary data-zh="全包价到底包什么？" data-en="What does the all-in price cover?">全包价到底包什么？</summary><p data-zh="运费、国内报关、目的国清关和税、派送到门，全包。您听到多少钱，最后就是多少钱，没有隐藏收费。" data-en="Freight, export customs, destination clearance and tax, and door delivery. The price you hear is the price you pay, no hidden fees.">运费、国内报关、目的国清关和税、派送到门，全包。您听到多少钱，最后就是多少钱，没有隐藏收费。</p></details>
+    <details><summary data-zh="怎么知道我的货到哪了？" data-en="How do I track my cargo?">怎么知道我的货到哪了？</summary><p data-zh="不用您查。每个节点我们主动发消息给您，着急的话报单号给客服，马上帮您看。" data-en="You don't have to. We message you at every milestone. In a hurry, give our team your case number and we check right away.">不用您查。每个节点我们主动发消息给您，着急的话报单号给客服，马上帮您看。</p></details>
+    <details><summary data-zh="付款怎么付？" data-en="How do I pay?">付款怎么付？</summary><p data-zh="按客服给您的收款方式付，备注务必写「对接人-代码-金额」。写了我们立刻对账发货，不写要人工核对，会慢。" data-en="Pay as our team instructs, and always write the memo: handler-code-amount. With it we match and release fast; without it we have to check by hand.">按客服给您的收款方式付，备注务必写「对接人-代码-金额」。写了我们立刻对账发货，不写要人工核对，会慢。</p></details>
+  </section>
+
+  <section id="quote">
+    <h2 data-zh="询价" data-en="Get a quote">询价</h2>
+    <p class="sec-sub" data-zh="填完提交，直接进我们客服邮箱，工作时间很快回复，报价带代码。" data-en="Submit and it lands in our service inbox. We reply fast during work hours, always with a coded quote.">填完提交，直接进我们客服邮箱，工作时间很快回复，报价带代码。</p>
+    <form class="quote" onsubmit="alert('示例站：正式版这里会把表单发进公司邮箱'); return false;">
+      <div><label data-zh="发货地" data-en="From">发货地</label><input placeholder="比如：深圳"></div>
+      <div><label data-zh="目的地" data-en="To">目的地</label><input placeholder="比如：曼谷"></div>
+      <div><label data-zh="货物是什么" data-en="Goods">货物是什么</label><input placeholder="比如：服装"></div>
+      <div><label data-zh="重量 / 体积" data-en="Weight / volume">重量 / 体积</label><input placeholder="比如：500kg / 3方"></div>
+      <div class="full"><label data-zh="您的联系方式（WhatsApp / 微信 / 邮箱）" data-en="Your contact (WhatsApp / WeChat / email)">您的联系方式（WhatsApp / 微信 / 邮箱）</label><input placeholder="方便我们把报价发给您"></div>
+      <div class="full"><button type="submit" data-zh="提交询价" data-en="Send">提交询价</button></div>
+    </form>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><b data-zh="公司名 LOGISTICS" data-en="Company LOGISTICS">公司名 LOGISTICS</b></p>
+    <p data-zh="邮箱：service@company.com（示例） · 电话：+86-xxx-xxxx-xxxx（示例） · 工作时间：周一到周六 9:00–18:00" data-en="Email: service@company.com (sample) · Phone: +86-xxx (sample) · Hours: Mon–Sat 9:00–18:00">邮箱：service@company.com（示例） · 电话：+86-xxx-xxxx-xxxx（示例） · 工作时间：周一到周六 9:00–18:00</p>
+    <p data-zh="强项：东南亚双清包税到门 · 海运 / 空运 / 陆运" data-en="Focus: Southeast Asia all-in door-to-door · Sea / Air / Land">强项：东南亚双清包税到门 · 海运 / 空运 / 陆运</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="#" onclick="alert('示例站：正式版这里跳 WhatsApp'); return false;">WhatsApp 💬</a>
+
+<script>
+let lang = 'zh';
+function toggleLang() {
+  lang = lang === 'zh' ? 'en' : 'zh';
+  document.querySelectorAll('[data-zh]').forEach(el => {
+    el.innerHTML = lang === 'zh' ? el.getAttribute('data-zh') : el.getAttribute('data-en');
+  });
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+}
+</script>
+</body>
+</html>
